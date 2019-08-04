@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import classes from "./extended.module.css";
+// import "./extended.css";
 
 class Extended extends Component {
   state = {
@@ -10,9 +12,6 @@ class Extended extends Component {
       this.props.url
     }&api_key=31c6b1550db0d44ade47f6883ea63a30&language=en-US`;
 
-    // const url = `https://api.themoviedb.org/3/genre/movie/list?api_key=31c6b1550db0d44ade47f6883ea63a30&language=en-US`;
-
-    // https://api.themoviedb.org/3/find/{external_id}?api_key=<<api_key>>&language=en-US
     fetch(url)
       .then(response => {
         return response.json();
@@ -26,10 +25,6 @@ class Extended extends Component {
       });
   }
 
-  // onClickHndler = () => {
-  //   this.loadContent();
-  // };
-
   render() {
     let options = "";
     if (this.state.listMovie !== "") {
@@ -39,12 +34,12 @@ class Extended extends Component {
             if (i < 5) {
               return (
                 <React.Fragment key={list.id}>
-                  <li value={list.title} style={{ alignSelf: "flex-end" }}>
+                  {/* <li value={list.title} style={{ alignSelf: "flex-end" }}>
                     {list.original_title || list.original_name}
-                  </li>
-                  <li>{list.overview}</li>
-                  <li>{list.release_date}</li>
-                  <li>{list.vote_average}</li>
+                  </li> */}
+                  <li className={classes.ListOne}>{list.overview}</li>
+                  <li className={classes.ListTwo}>{list.release_date}</li>
+                  <li className={classes.ListThree}>{list.vote_average}</li>
                   <li>
                     <img
                       style={{ width: "200px" }}

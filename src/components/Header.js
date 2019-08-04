@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Header.module.css";
-// import "./Header.css";
+import "./Header.module.css";
 
 const header = props => {
   return (

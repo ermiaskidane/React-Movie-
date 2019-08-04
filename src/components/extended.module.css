@@ -1,0 +1,22 @@
+/* ul > li:not(:nth-last-child(20)) {
+  display: none;
+} */
+
+.ListOne,
+.ListTwo,
+.ListThree {
+  display: none;
+}
+
+/* .ListOne:hover,
+.ListTwo:hover,
+.ListThree:hover {
+  display: inline-block;
+} */
+
+li img {
+  padding: 0 5px;
+}
+li img:hover {
+  border-radius: 50%;
+}

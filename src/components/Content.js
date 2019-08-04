@@ -37,7 +37,6 @@ class Content extends Component {
 
   handleKeyUp = e => {
     if (e.key === "Enter" && this.state.searchMovies !== "") {
-      // console.log(this.loadContent());
       this.loadContent();
     }
   };
@@ -75,8 +74,14 @@ class Content extends Component {
         />
         <h1>Content</h1>
         <ul className={classes.ListMovie}>list of movies: {movie}</ul>
-        <Extended  name="Popular Movies" url="discover/movie?sort_by=popularity.desc&include_adult=false&include_video=false&page=1" />
-        <Extended name="Popular Tv Shows" url="discover/tv?sort_by=popularity.desc&page=1&include_null_first_air_dates=false" />
+        <Extended
+          name="Popular Movies"
+          url="discover/movie?sort_by=popularity.desc&include_adult=false&include_video=false&page=1"
+        />
+        <Extended
+          name="Popular Tv Shows"
+          url="discover/tv?sort_by=popularity.desc&page=1&include_null_first_air_dates=false"
+        />
 
         <Extended name="Sci Fic" url="genre/878/movies?language=en-US" />
         {/* <Extended url="genre/movie/list?language=en-US" /> */}
