@@ -1,0 +1,9 @@
+.Content {
+  color: red;
+}
+.ListMovie {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+}
