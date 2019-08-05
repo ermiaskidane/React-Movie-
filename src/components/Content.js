@@ -11,7 +11,7 @@ class Content extends Component {
   };
 
   loadContent() {
-    const url = `https://api.themoviedb.org/3/search/movie?api_key=31c6b1550db0d44ade47f6883ea63a30&query=${
+    const url = `https://api.themoviedb.org/3/search/movie?api_key=${APIKEY}&query=${
       this.state.searchMovies
     }&page=1`;
 
