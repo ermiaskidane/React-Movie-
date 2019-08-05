@@ -37,15 +37,15 @@ class Extended extends Component {
                   {/* <li value={list.title} style={{ alignSelf: "flex-end" }}>
                     {list.original_title || list.original_name}
                   </li> */}
-                  <li className={classes.ListOne}>{list.overview}</li>
-                  <li className={classes.ListTwo}>{list.release_date}</li>
-                  <li className={classes.ListThree}>{list.vote_average}</li>
-                  <li>
-                    <img
+                  <img
                       style={{ width: "200px" }}
                       src={"https://image.tmdb.org/t/p/w500" + list.poster_path}
                     />
-                  </li>
+                  <div>
+                      <li className={classes.ListOne}>{list.overview}</li>
+                      <li className={classes.ListTwo}>{list.release_date}</li>
+                      <li className={classes.ListThree}>{list.vote_average}</li>
+                  </div>  
                 </React.Fragment>
               );
             }
