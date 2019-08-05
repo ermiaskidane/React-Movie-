@@ -10,7 +10,7 @@ class Extended extends Component {
   componentDidMount() {
     const url = `https://api.themoviedb.org/3/${
       this.props.url
-    }&api_key=31c6b1550db0d44ade47f6883ea63a30&language=en-US`;
+    }&api_key=${APIKEY}`;
 
     fetch(url)
       .then(response => {
