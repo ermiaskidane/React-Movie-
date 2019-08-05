@@ -2,17 +2,23 @@
   display: none;
 } */
 
-.ListOne,
+/* .ListOne,
 .ListTwo,
 .ListThree {
   display: none;
+} */
+
+.List {
+  display: none;
 }
-
-
-
-li img {
+img {
   padding: 0 5px;
 }
-li img:hover {
-  border-radius: 50%;
+img:hover + .List {
+  /* border-radius: 50%; */
+  position: relative;
+  z-index: 10;
+  width: 400px;
+  height: 200px;
+  display: block;
 }
